@@ -52,10 +52,6 @@ export function Home() {
     })) as unknown as any,
   });
 
-  console.log("fuck");
-  console.log(deposits.data);
-  console.log(deposits.error);
-
   const redeemables = useMemo<Record<string, BigInt>>(() => {
     if (deposits.data) {
       return deposits.data.reduce(

@@ -52,9 +52,6 @@ export function Action({ tick }: Props) {
       hash,
     });
 
-  console.log("blah");
-  console.log(allowance);
-
   const [tabIndex, setTabIndex] = useState(0);
   const [amount, setAmount] = useState("");
   const [error, setError] = useState(false);
@@ -79,10 +76,6 @@ export function Action({ tick }: Props) {
 
   async function onSubmit() {
     const isMint = getIsMint(tabIndex);
-    console.log("tard");
-
-    console.log(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS);
-
     const amountN = BigInt(parseFloat(amount) * 10e17);
 
     try {
