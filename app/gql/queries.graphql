@@ -1,0 +1,23 @@
+query HomePage {
+  pool(id: "0xaCCAD35bB4EcbFf5614423e598d97b968657cf44") {
+    id
+    totalValueLocked
+    collateralToken {
+      id
+      name
+    }
+    currencyToken {
+      id
+      name
+      symbol
+    }
+    ticks {
+      id
+      raw
+      duration
+      limit
+      value
+      available
+    }
+  }
+}
